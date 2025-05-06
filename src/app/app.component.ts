@@ -1,8 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatButtonModule} from '@angular/material/button';
 import { Router } from '@angular/router';
-import { ConnectedOverlayPositionChange } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-root',
