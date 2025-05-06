@@ -27,7 +27,7 @@ const routes: Routes = [
     component: CalculatorComponent
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  // { path: '**', redirectTo: 'home' }
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({

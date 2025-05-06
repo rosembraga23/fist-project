@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-calculator',
@@ -11,9 +11,6 @@ export class CalculatorComponent {
   result: number = 0;
 
   sumNumbers(): void {
-    this.result = this.number1 + this.number2;
-  }
-  sum(): void {
     this.result = this.number1 + this.number2;
   }
 

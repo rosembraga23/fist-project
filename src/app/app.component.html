@@ -1,21 +1,23 @@
-<!-- <h1>
-  {{title}}
-</h1>
+<mat-toolbar class="corToolbar">
+      <h1>Conteúdo do toolbar!</h1>
+</mat-toolbar>
 
-<nav>
-  <a routerLink="/">Home</a>
-  <p></p>
-  <a routerLink="/about">About</a>
-</nav>
+<div class="menu">
+    <button mat-button [matMenuTriggerFor]="aboveMenu">Menu</button>
+    <mat-menu #aboveMenu="matMenu" yPosition="above">
+      <button mat-menu-item (click)="onMenuClick('/about')">Sobre</button>
+      <button mat-menu-item (click)="onMenuClick('/calculator')">Calculadora</button>
+      <button mat-menu-item (click)="onMenuClick('/primeiro')">Foto</button>
+    </mat-menu>
 
- -->
-
-
-<h1>Menu</h1>
-<ul>
-  <li><a href="/about">Sobre</a></li>
-  <li><a href="/calculator">Calculadora</a></li>
-  <li><a href="/primeiro">Primeiro</a></li>
-</ul>
+    <button mat-button [matMenuTriggerFor]="belowMenu">Help</button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <button mat-menu-item>Item1</button>
+      <button mat-menu-item>Item2</button>
+    </mat-menu>
+</div>
 
 <router-outlet></router-outlet>
+
+ 
+

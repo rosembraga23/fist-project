@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./primeiro.component.css']
 })
 export class PrimeiroComponent {
-  title = 'Página Primeiro!!! ';
+  title = 'Vamos Calcular!!';
 }

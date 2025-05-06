@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { CalculatorComponent } from './calculator.component';
-import { CalculatorRoutingModule } from './calculator-routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -9,8 +8,9 @@ import { CalculatorRoutingModule } from './calculator-routing.module';
     CalculatorComponent
   ],
   imports: [
-    CommonModule,
-    CalculatorRoutingModule
+    // CommonModule, // a inclusão deste módulo apresentou erro no resultado da calculadora
+    // CalculatorRoutingModule, // a inclusão deste módulo apresentou erro no resultado da calculadora
+    FormsModule // este módulo tirou erro do html [(ngModel)]="number1"
   ]
 })
 export class CalculatorModule { }
