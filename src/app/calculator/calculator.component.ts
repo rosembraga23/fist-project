@@ -1,9 +1,9 @@
-import { Component} from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @Component({
   selector: 'app-calculator',
   templateUrl: './calculator.component.html',
-  styleUrls: ['./calculator.component.css']
+  styleUrls: ['./calculator.component.css'],
 })
 export class CalculatorComponent {
   number1: number = 0;
@@ -13,5 +13,12 @@ export class CalculatorComponent {
   sumNumbers(): void {
     this.result = this.number1 + this.number2;
   }
+
+  clearNum(): void {
+    this.number1 = 0;
+    this.number2 = 0;
+    this.result = 0;
+  }
+
 
 }

@@ -2,9 +2,22 @@
 <h1>CALCULADORA</h1>
 <br>
 <h2>Some dois Números:</h2>
-<input type="number" [(ngModel)]="number1" placeholder="Número 1">
-<input type="number" [(ngModel)]="number2" placeholder="Número 2">
-<button (click)="sumNumbers()">Somar</button>
+
+<input type="number" class="lado-lado" [(ngModel)]="number1" placeholder="Número 1">
+<input type="number" class="lado-lado" [(ngModel)]="number2" placeholder="Número 2">
+
+<button class = "example-button-soma" matButton = "filled" (click)="sumNumbers()">
+        Somar
+</button>
+   
 <h3>Resultado: {{ result }}</h3>
+<p>
+  <div class="botaoLimpar">
+    <button class = "example-button-row" matButton = "filled" (click)="clearNum()">
+        <mat-icon>delete</mat-icon>
+         Limpar 
+    </button> 
+  </div> 
+
 
 
