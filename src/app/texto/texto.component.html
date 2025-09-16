@@ -1,0 +1,21 @@
+<mat-form-field appearance="outline" class="campo">
+  <mat-label>Nome</mat-label>
+  <input
+    matInput
+    [formControl]="textoCtrl"
+    maxlength="50"
+    (input)="onInput($event)"
+    placeholder="Digite aqui..."
+  >
+  <mat-hint align="end">{{ textoCtrl.value?.length || 0 }}/50</mat-hint>
+  <mat-error *ngIf="textoCtrl.hasError('required')">
+    O campo é obrigatório
+  </mat-error>
+  <mat-error *ngIf="textoCtrl.hasError('maxlength')">
+    Máximo de 50 caracteres
+  </mat-error>
+  <mat-error *ngIf="textoCtrl.hasError('pattern')">
+    Apenas letras maiúsculas são permitidas
+  </mat-error>
+</mat-form-field>
+

@@ -12,8 +12,8 @@
 
     <button mat-button [matMenuTriggerFor]="belowMenu">Help</button>
     <mat-menu #belowMenu="matMenu" yPosition="below">
-      <button mat-menu-item>Item1</button>
-      <button mat-menu-item>Item2</button>
+      <button mat-menu-item (click)="onMenuClick('/texto')">Input</button>
+      <button mat-menu-item>DropDown</button>
     </mat-menu>
 </div>
 

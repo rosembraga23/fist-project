@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { PrimeiroComponent } from './primeiro/primeiro.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { TextoComponent } from './texto/texto.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,16 @@ const routes: Routes = [
     loadChildren: () => import('./calculator/calculator.module').then(m => m.CalculatorModule),
     component: CalculatorComponent
   },
+  {
+    path: 'texto',
+    loadChildren: () => import('./texto/texto.module').then(m => m.TextoModule),
+    component: TextoComponent
+  },
+  // {
+  //   path: 'dropDown',
+  //   loadChildren: () => import('./texto/texto.module').then(m => m.TextoModule),
+  //   component: TextoComponent
+  // },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home' }
 ];

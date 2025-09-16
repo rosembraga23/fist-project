@@ -1,9 +1,10 @@
 import { MatDividerModule } from '@angular/material/divider';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CalculatorComponent } from './calculator.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+// import { TextoModule } from '../texto/texto.module';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatIconModule,
     MatButtonModule,
     MatDividerModule,
+    // TextoModule
 
   ],
   schemas: [

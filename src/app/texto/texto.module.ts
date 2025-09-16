@@ -1,27 +1,25 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AboutRoutingModule } from './about-routing.module';
-import { AboutComponent } from './about.component';
+import { TextoComponent } from './texto.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { TextoModule } from '../texto/texto.module';
+
+
 
 @NgModule({
   declarations: [
-    AboutComponent,
+    TextoComponent //PARA EXPORTAR O COMPONENTE
   ],
   imports: [
     CommonModule,
-    AboutRoutingModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    TextoModule //PARA IMPORTAR O COMPONENTE TEXTO
   ],
+  exports: [TextoComponent], //PARA EXPORTAR O COMPONENTE
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-  exports:[ ]
 })
-export class AboutModule { }
+export class TextoModule { } //PARA EXPORTAR O COMPONENTE "export"

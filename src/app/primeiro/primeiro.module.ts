@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PrimeiroRoutingModule } from './primeiro-routing.module';
 import { PrimeiroComponent } from './primeiro.component';
+// import { TextoModule } from "../texto/texto.module";
 
 @NgModule({
   declarations: [
@@ -9,7 +10,8 @@ import { PrimeiroComponent } from './primeiro.component';
   ],
   imports: [
     CommonModule,
-    PrimeiroRoutingModule
-  ]
+    PrimeiroRoutingModule,
+    // TextoModule
+]
 })
 export class PrimeiroModule { }
