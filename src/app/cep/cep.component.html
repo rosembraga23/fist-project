@@ -1,0 +1,42 @@
+<!-- <input [(ngModel)]="cep" placeholder="Digite o CEP" />
+<button (click)="buscarCep()">Buscar</button>
+
+<pre>{{ resultado | json}}</pre> -->
+
+<div style="max-width: 500px; margin: 30px auto;">
+  <mat-card>
+    <h2>Consulta de CEP</h2>
+
+    <!-- Campo de entrada -->
+    <mat-form-field appearance="outline" style="width: 100%;">
+      <mat-label>Digite o CEP</mat-label>
+      <input
+        matInput
+        [(ngModel)]="cep"
+        placeholder="Ex: 01001000"
+        maxlength="8"
+      />
+    </mat-form-field>
+
+    <!-- Botão -->
+    <button
+      mat-raised-button
+      color="primary"
+      style="width: 100%; margin-top: 10px;"
+      (click)="buscarCep()"
+    >
+      Buscar CEP
+    </button>
+  </mat-card>
+
+  <!-- Resultado -->
+  <mat-card *ngIf="resultado" style="margin-top: 20px;">
+    <h3>Resultado</h3>
+    <p><strong>CEP:</strong> {{ resultado.cep }}</p>
+    <p><strong>Logradouro:</strong> {{ resultado.street }}</p>
+    <p><strong>Bairro:</strong> {{ resultado.neighborhood }}</p>
+    <p><strong>Cidade:</strong> {{ resultado.city }}</p>
+    <p><strong>Estado:</strong> {{ resultado.state }}</p>
+  </mat-card>
+</div>
+

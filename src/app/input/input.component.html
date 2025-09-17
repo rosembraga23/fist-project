@@ -1,0 +1,41 @@
+<!-- <div class="input-container">
+  <label *ngIf="label">{{ label }} <span *ngIf="required" class="required">*</span></label>
+  <input
+    [type]="type"
+    [required]="required"
+    [ngClass]="[size]"
+    [style.color]="color"
+  />
+</div> -->
+
+<mat-form-field [appearance]="'outline'" class="input-container">
+  <mat-label>{{ label }}</mat-label>
+  <input
+    matInput
+    [type]="type"
+    [required]="required"
+    [ngClass]="[size]"
+    [style.color]="color"
+  />
+  <mat-error *ngIf="required">
+    {{ label }} é obrigatório
+  </mat-error>
+</mat-form-field>
+
+<!-- <app-input
+  type="email"
+  size="medium"
+  color="blue"
+  [required]="true"
+  label="E-mail">
+</app-input> -->
+
+<!-- <app-input
+  type="password"
+  color="green"
+  [required]="false"
+  label="Senha">
+</app-input> -->
+
+
+

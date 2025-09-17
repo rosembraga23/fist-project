@@ -1,3 +1,4 @@
+import { CepModule } from './cep/cep.module';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -5,6 +6,8 @@ import { AboutComponent } from './about/about.component';
 import { PrimeiroComponent } from './primeiro/primeiro.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { TextoComponent } from './texto/texto.component';
+import { InputComponent } from './input/input.component';
+import { CepComponent } from './cep/cep.component';
 
 const routes: Routes = [
   {
@@ -32,11 +35,16 @@ const routes: Routes = [
     loadChildren: () => import('./texto/texto.module').then(m => m.TextoModule),
     component: TextoComponent
   },
-  // {
-  //   path: 'dropDown',
-  //   loadChildren: () => import('./texto/texto.module').then(m => m.TextoModule),
-  //   component: TextoComponent
-  // },
+  {
+    path: 'input',
+    loadChildren: () => import('./input/input.module').then(m => m.InputModule),
+    component: InputComponent
+  },
+  {
+    path: 'cep',
+    loadChildren: () => import('./cep/cep.module').then(m => m.CepModule),
+    component: CepComponent
+  },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home' }
 ];

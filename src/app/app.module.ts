@@ -12,6 +12,9 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CalculatorModule } from './calculator/calculator.module';
 import { TextoModule } from './texto/texto.module';
+import { InputModule } from './input/input.module';
+import { HttpClientModule } from '@angular/common/http';
+import { CepModule } from './cep/cep.module';
 
 
 @NgModule({
@@ -31,7 +34,10 @@ import { TextoModule } from './texto/texto.module';
     MatInputModule,
     ReactiveFormsModule,
     CalculatorModule,
-    TextoModule
+    TextoModule,
+    InputModule,
+    HttpClientModule ,
+    CepModule
     
   ],
   providers: [],
