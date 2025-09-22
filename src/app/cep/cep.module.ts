@@ -1,28 +1,31 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CepRoutingModule } from './cep/cep-routing.module';
-import { CepComponent } from './cep/cep.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { CepComponent } from './cep.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// Angular Material
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 
+
+
 @NgModule({
-  declarations: [
-  ],
+  declarations: [CepComponent],
   imports: [
+    //CommonModule
     BrowserModule,
-    CepRoutingModule,
+    BrowserAnimationsModule,  // ⚡ Obrigatório para Angular Material funcionar
     HttpClientModule,
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatCardModule 
-  ],
-  providers: [],
-  bootstrap: [CepComponent]
+    MatCardModule
+    
+  ]
 })
-export class AppModule { }
+export class CepModule { }

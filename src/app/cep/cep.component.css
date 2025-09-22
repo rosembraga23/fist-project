@@ -1,0 +1,11 @@
+.cep-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.cep-card {
+  margin-top: 20px;
+}
