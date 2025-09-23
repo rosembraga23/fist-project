@@ -1,12 +1,12 @@
-import { CepResponse, CepService } from './../service/cep/cep.service';
+import { CepResponse, CepService } from './../app/service/cep/cep.service';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-cep',
-  templateUrl: './cep.component.html',
-  styleUrls: ['./cep.component.css']
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class CepComponent {
+export class AppComponent {
   cep: string = '';
   resultado: CepResponse | null = null;
   error: string | null = null;
@@ -15,6 +15,7 @@ export class CepComponent {
   constructor(private cepService: CepService) {}
 
   consultar() {
+    this.resultado = null;
     if (!this.cep || this.cep.length < 8) {
       this.error = 'Digite um CEP válido com 8 números';
       return;

@@ -1,18 +1,23 @@
 <div class="cep-container">
+  <h2>Consulta de CEP</h2>
   <mat-form-field appearance="outline">
     <mat-label>Digite o CEP</mat-label>
-    <input matInput [(ngModel)]="cep" placeholder="Ex: 01001000" maxlength="8">
+    <input matInput [(ngModel)]="cep" placeholder="Ex: 01001000" maxlength="8" style="
+    height: 50px">
   </mat-form-field>
 
-  <button mat-raised-button color="primary" (click)="consultar()" [disabled]="loading">
+  <button mat-raised-button color="primary"
+   (click)="consultar()" [disabled]="loading">
     {{ loading ? 'Consultando...' : 'Consultar CEP' }}
   </button>
+
+
 
   <mat-card *ngIf="resultado" class="cep-card">
     <mat-card-title>Resultado da Consulta</mat-card-title>
     <mat-card-content>
       <p><strong>CEP:</strong> {{ resultado.cep }}</p>
-      <p><strong>Rua:</strong> {{ resultado.street }}</p>
+      <p><strong>Logradouro:</strong> {{ resultado.street }}</p>
       <p><strong>Bairro:</strong> {{ resultado.neighborhood }}</p>
       <p><strong>Cidade:</strong> {{ resultado.city }}</p>
       <p><strong>Estado:</strong> {{ resultado.state }}</p>
@@ -20,4 +25,5 @@
   </mat-card>
 
   <mat-error *ngIf="error">{{ error }}</mat-error>
+  
 </div>
