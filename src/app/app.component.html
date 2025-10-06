@@ -2,7 +2,17 @@
   <h2>Consulta de CEP</h2>
   <mat-form-field appearance="outline">
     <mat-label>Digite o CEP</mat-label>
-    <input matInput [(ngModel)]="cep" placeholder="Ex: 01001000" maxlength="8" style="
+    <input matInput [(ngModel)]="cep" 
+    required
+    pattern="^[0-9]{8}$"
+    maxlength="8"
+    minlength="8"
+    (keypress)="permitirSomenteNumeros($event)"
+    (paste)="bloquearColar($event)"
+    (drop)="bloquearColarMouse($event)"
+    (dragover)="bloquearColarMouse($event)"
+    (contextmenu)="bloquearCliqueDireito($event)"
+    placeholder="Ex: 01001000" style="
     height: 50px">
   </mat-form-field>
 
