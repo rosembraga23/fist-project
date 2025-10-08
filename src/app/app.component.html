@@ -9,7 +9,12 @@
       <button mat-menu-item (click)="onMenuClick('/calculator')">Calculadora</button>
       <button mat-menu-item (click)="onMenuClick('/primeiro')">Foto</button>
     </mat-menu>
-
+    <button mat-button [matMenuTriggerFor]="cursoMenu">Utilitários</button>
+    <mat-menu #cursoMenu="matMenu" yPosition="above">
+      <button mat-menu-item (click)="onMenuClick('/curso')">Curso</button>
+      <button mat-menu-item (click)="onMenuClick('/')">Curso1</button>
+      <button mat-menu-item (click)="onMenuClick('/')">Curso2</button>
+    </mat-menu>
     <button mat-button [matMenuTriggerFor]="belowMenu">Help</button>
     <mat-menu #belowMenu="matMenu" yPosition="below">
       <button mat-menu-item (click)="onMenuClick('/texto')">Texto</button>

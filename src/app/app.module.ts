@@ -15,11 +15,13 @@ import { TextoModule } from './texto/texto.module';
 import { InputModule } from './input/input.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CepModule } from './cep/cep.module';
+import { CursoComponent } from './curso/curso.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    CursoComponent,
     
   ],
   imports: [

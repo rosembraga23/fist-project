@@ -8,6 +8,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { TextoComponent } from './texto/texto.component';
 import { InputComponent } from './input/input.component';
 import { CepComponent } from './cep/cep.component';
+import { CursoComponent } from './curso/curso.component';
 
 const routes: Routes = [
   {
@@ -44,6 +45,11 @@ const routes: Routes = [
     path: 'cep',
     loadChildren: () => import('./cep/cep.module').then(m => m.CepModule),
     component: CepComponent
+  },
+   {
+    path: 'curso',
+    loadChildren: () => import('./curso/curso.module').then(m => m.CursoModule),
+    component: CursoComponent
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home' }
