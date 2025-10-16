@@ -9,13 +9,14 @@
 </div> -->
 
 <mat-form-field [appearance]="'outline'" class="input-container">
-  <mat-label>{{ label }}</mat-label>
+  <mat-label>Nome</mat-label>
   <input
+    label="'Nome'"
     matInput
-    [type]="type"
-    [required]="required"
-    [ngClass]="[size]"
-    [style.color]="color"
+    type="text"
+    required="'required'"
+    ngClass="[large]"
+    [style.color]= "'red'"
   />
   <mat-error *ngIf="required">
     {{ label }} é obrigatório

@@ -4,7 +4,10 @@ import { CalculatorComponent } from './calculator.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-// import { TextoModule } from '../texto/texto.module';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { CommonModule } from '@angular/common';
+
 
 
 @NgModule({
@@ -13,9 +16,13 @@ import { MatButtonModule } from '@angular/material/button';
   ],
   imports: [
     FormsModule, // este módulo tirou erro do html [(ngModel)]="number1"
+    CommonModule,
+    ReactiveFormsModule,
     MatIconModule,
     MatButtonModule,
-    MatDividerModule,
+    // MatDividerModule,
+    MatFormFieldModule,
+    MatInputModule,
     // TextoModule
 
   ],

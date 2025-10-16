@@ -8,8 +8,10 @@
 }
 
 .botaoLimpar{
-    width: 90px;
     height: 35px;
+    max-width: 600px;
+    width: 90px;
+    height: 47px;
 }
 
 input{
@@ -28,13 +30,13 @@ section {
   min-width: 120px;
 }
 
-.example-button-row {
+/* .example-button-row {
   width: 90px;
   height: 35px;
   margin-left: 1%;
   background-color: rgb(7, 87, 134);
   top: -14px;
-}
+} */
 
 .example-button-soma {
   width: 90px;
@@ -43,9 +45,9 @@ section {
   background-color: rgb(7, 87, 134);
 }
 
-.example-button-row .mat-mdc-button-base {
+/* .example-button-row .mat-mdc-button-base {
   margin: 8px 8px 8px 0;
-}
+} */
 
 .example-flex-container {
   display: flex;
@@ -55,4 +57,26 @@ section {
 
 .lado-lado{
     display:inline-flex;
+    margin-left: 1%;
+    height: 40px;
+}
+
+.campo {
+  margin-top: 3%;
+  width: 500%;
+  max-width: 180px;
+  height: 40px;
+}
+
+.example-label {
+  font-size: 14px;
+  margin: 0 16px 0 8px;
+  min-width: 120px;
+}
+
+.example-button-row {
+  max-width: 600px;
+  width: 100px;
+  height: 50px;
+  margin-left: 1%;
 }

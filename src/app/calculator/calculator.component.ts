@@ -1,4 +1,5 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component} from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-calculator',
@@ -18,6 +19,20 @@ export class CalculatorComponent {
     this.number1 = 0;
     this.number2 = 0;
     this.result = 0;
+  }
+
+    textoCtrl = new FormControl('', [
+      Validators.required,
+      Validators.maxLength(50),
+      Validators.pattern('^[A-Z]*$') // Apenas letras maiúsculas
+    ]);
+  
+
+  onInput(event: Event) {
+    const input = event.target as HTMLInputElement;
+    // Força o valor para maiúsculo
+    input.value = input.value.toUpperCase();
+    this.textoCtrl.setValue(input.value, { emitEvent: false });
   }
 
 

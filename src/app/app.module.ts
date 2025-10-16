@@ -30,7 +30,6 @@ import { CursoComponent } from './curso/curso.component';
     HomeRoutingModule,
     BrowserAnimationsModule,
     MatMenuModule,
-    MatButtonModule,
     MatToolbarModule,
     MatFormFieldModule,
     MatInputModule,
@@ -39,7 +38,8 @@ import { CursoComponent } from './curso/curso.component';
     TextoModule,
     InputModule,
     HttpClientModule ,
-    CepModule
+    CepModule,
+    MatButtonModule
     
   ],
   providers: [],

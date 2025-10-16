@@ -1,1 +1,13 @@
 <p>curso works!</p>
+<a  href="{{nomePortal}}" target="_blank" rel="noopener noreferrer"> 
+    <!-- o link será aberto em uma nova aba -->
+{{nomePortal}}
+</a>
+
+<!-- <app-curso-detalhe></app-curso-detalhe> -->
+
+<ul>
+    <li *ngFor="let curso of cursos">
+        {{curso}}
+    </li>
+</ul>
