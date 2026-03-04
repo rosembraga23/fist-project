@@ -12,7 +12,8 @@
     <button mat-button [matMenuTriggerFor]="cursoMenu">Utilitários</button>
     <mat-menu #cursoMenu="matMenu" yPosition="above">
       <button mat-menu-item (click)="onMenuClick('/curso')">Curso</button>
-      <button mat-menu-item (click)="onMenuClick('/')">Curso1</button>
+      <button mat-menu-item (click)="onMenuClick('/dataBinding')">Data Binding</button>
+      <button mat-menu-item (click)="onMenuClick('/grafico')">Gráfico</button>
       <button mat-menu-item (click)="onMenuClick('/')">Curso2</button>
     </mat-menu>
     <button mat-button [matMenuTriggerFor]="belowMenu">Help</button>

@@ -1,0 +1,94 @@
+<p>data-binding works!</p>
+<section>
+    <article>
+        <h2 class="titulo"> Interpolation / Interpolação</h2>
+        <p> String redenrizando com Interpolação: {{url}}</p>
+        <p>Resultado de 11 + 5 é: {{ 11 + 5 }}</p>
+        <p>Resultado de 11 + 5 não é: {{ getValor() }}</p>
+        <p>Só Curso de Angula: {{ cursoAngular }}</p>
+        <p>Só Curtir Curso: {{ getCurtirCurso() }}</p>
+        <p>Curso de Angula && Curtir Curso: {{ cursoAngular && getCurtirCurso() }}</p>
+    </article>
+
+    <article>
+        <br>
+        <h2 class="titulo">Property Binding </h2>
+        <br>
+        <h3> Imagem 1</h3>
+        <img class="imagem" src="{{ urlImagem }}">
+        <h3> Imagem 2</h3>
+        <img class="imagem" [src]="urlImagem">
+    </article>
+
+    <article>
+        <h2 class="titulo"> Class e Style Binding</h2>
+        <div class="dropdown-item">
+          Selecione uma classe 
+          <select #classe (change)="0">
+            <option value="selecione">Selecione</option>
+              <option value="alert-success">Sucesso</option>
+              <option value="alert-info">Info</option>
+              <option value="alert-warning">Alerta</option>
+              <option value="alert-danger">Erro</option>
+          </select>
+        </div>
+    </article>
+
+    <br><br>
+
+    <div class="alert {{classe.value}}" role="alert"
+        [style.display]="classe.value == 'selecione' ? 'none' : 'block' ">
+        Texto colorido conforme valor do combobox.
+    </div>
+    <div class="alert" role="alert" *ngIf="classe.value == 'alert-success'"
+        [class.alert-success]="classe.value == 'alert-success'">Sucesso
+    </div>
+    <div class="alert" role="alert" *ngIf="classe.value == 'alert-danger'"
+        [class.alert-danger]="classe.value == 'alert-danger'">Erro
+    </div>
+    <div class="alert" role="alert" *ngIf="classe.value == 'alert-warning'"
+        [class.alert-warning]="classe.value == 'alert-warning'">
+        Alerta
+    </div>
+    <div class="alert" role="alert" *ngIf="classe.value == 'alert-info'"
+        [class.alert-info]="classe.value == 'alert-info'">
+        Info
+    </div>
+    <div class="alert alert-danger" role="alert"
+         [style.display]="classe.value == 'alert-danger' ? 'block' : 'none' ">
+         Este texto somente aparece em caso de erro.
+    </div>
+    
+</section>
+
+<!-- <div class="dropdown"> -->
+  <!-- <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"> -->
+    <!-- Dropdown button -->
+  <!-- </button> -->
+  <!-- <ul class="dropdown-menu"> -->
+    <!-- <li><a class="dropdown-item" href="#">Action</a></li> -->
+    <!-- <li><a class="dropdown-item" href="#">Another action</a></li> -->
+    <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+  <!-- </ul> -->
+<!-- </div> -->
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

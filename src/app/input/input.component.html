@@ -12,15 +12,21 @@
   <mat-label>Nome</mat-label>
   <input
     label="'Nome'"
+    [formControl]="textoCtrl"
     matInput
     type="text"
-    required="'required'"
-    ngClass="[large]"
+    maxlength="10"
+    [required]="'required'"
+    ngClass="[small]"
     [style.color]= "'red'"
   />
-  <mat-error *ngIf="required">
-    {{ label }} é obrigatório
+  <mat-error *ngIf="textoCtrl.hasError('required')">
+      O campo é obrigatório
   </mat-error>
+
+  <!-- <mat-error *ngIf="required"> -->
+    <!-- {{ label }} é obrigatório -->
+  <!-- </mat-error> -->
 </mat-form-field>
 
 <!-- <app-input

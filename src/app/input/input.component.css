@@ -1,8 +1,9 @@
 .input-container {
   margin-top: 3%;
-  display: flex;
-  flex-direction: column;
-  margin: 10px 0;
+  margin: 10px;
+  height: 10%;
+  max-height: 1px;
+  width: 70%;
 }
 
 label {

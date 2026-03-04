@@ -9,6 +9,8 @@ import { TextoComponent } from './texto/texto.component';
 import { InputComponent } from './input/input.component';
 import { CepComponent } from './cep/cep.component';
 import { CursoComponent } from './curso/curso.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
+import { GraficoComponent } from './grafico/grafico.component';
 
 const routes: Routes = [
   {
@@ -37,6 +39,11 @@ const routes: Routes = [
     component: TextoComponent
   },
   {
+  path: 'grafico',
+  loadChildren: () => import('./grafico/grafico.module').then(m => m.GraficoModule),
+  component: GraficoComponent
+  },
+  {
     path: 'input',
     loadChildren: () => import('./input/input.module').then(m => m.InputModule),
     component: InputComponent
@@ -51,6 +58,14 @@ const routes: Routes = [
     loadChildren: () => import('./curso/curso.module').then(m => m.CursoModule),
     component: CursoComponent
   },
+  {
+   path: 'dataBinding',
+   loadChildren: () => import('./data-binding/data-binding.module').then(m => m.DataBindingModule),
+   component: DataBindingComponent
+  },
+  
+
+  
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home' }
 ];

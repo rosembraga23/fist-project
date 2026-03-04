@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './../app-routing.module';
 import { Component, OnInit } from '@angular/core';
 import { CursoService } from './curso.service';
 

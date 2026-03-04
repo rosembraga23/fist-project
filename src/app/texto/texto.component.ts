@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-texto',
   templateUrl: './texto.component.html',
   styleUrls: ['./texto.component.css']
 })
-export class TextoComponent {
+export class TextoComponent{
+
   textoCtrl = new FormControl('', [
     Validators.required,
     Validators.maxLength(50),
@@ -19,4 +21,5 @@ export class TextoComponent {
     input.value = input.value.toUpperCase();
     this.textoCtrl.setValue(input.value, { emitEvent: false });
   }
+
 }
