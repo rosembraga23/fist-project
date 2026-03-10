@@ -1,5 +1,5 @@
 import { TextoComponent } from './../texto/texto.component';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import Chart from 'chart.js/auto';
 import { Colors, Legend } from 'chart.js';
 @Component({
@@ -7,21 +7,37 @@ import { Colors, Legend } from 'chart.js';
   templateUrl: './grafico.component.html',
   styleUrls: ['./grafico.component.css']
 })
-export class GraficoComponent implements OnInit{
+export class GraficoComponent implements AfterViewInit {
 
-  
 
   @ViewChild("meuCanvas", {static: true}) elemento!: ElementRef
-  ngOnInit(){
-    new Chart(this.elemento.nativeElement, {
+
+  @Input() labels: string[] = [];
+  @Input() data: number[] = [];
+  @Input() titulo: string = '';
+
+   chart!: Chart;
+
+    ngAfterViewInit(): void {
+    this.criarGrafico();
+  }
+
+
+  //ngOnInit(){
+
+  criarGrafico(): void {
+   this.chart = new Chart(this.elemento.nativeElement, {
       type: 'bar',
       data: {
-        labels:["Janeiro", "Fevereiro", "Março", "Abril", "Maio"],
+        //labels:["Janeiro", "Fevereiro", "Março", "Abril", "Maio"],
+        labels: this.labels,
         datasets: [
           {
-              data:[30, 20, 10, 13, 5],
-              backgroundColor: ["blue", "yellow", "pink", "red"],
-              label: "Meses"
+              //data:[2, 20, 10, 13, 5],
+              label: this.titulo,
+              data: this.data,
+              backgroundColor: ["blue", "yellow", "pink", "red", "orange"],
+              //label: "Meses"
           },
           
         ]
@@ -49,6 +65,7 @@ export class GraficoComponent implements OnInit{
         }
       }
     });
-  }
+    }
+  //}
 
 }

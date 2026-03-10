@@ -19,13 +19,12 @@ import { CursoComponent } from './curso/curso.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { GraficoComponent } from './grafico/grafico.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
     CursoComponent,
     DataBindingComponent,
-    GraficoComponent,
+    GraficoComponent
     
   ],
   imports: [
@@ -44,7 +43,7 @@ import { GraficoComponent } from './grafico/grafico.component';
     HttpClientModule,
     CepModule,
     MatButtonModule,
-    FormsModule
+    FormsModule,
 ],
   providers: [],
   bootstrap: [AppComponent],

@@ -14,5 +14,12 @@
 
 <br>
 <br>
-<!-- chamada de outro componente - data-binding -->
+<!-- chamada de componente - data-binding -->
 <app-data-binding></app-data-binding>
+
+<!-- chamada de componente - app-grafico -->
+<app-grafico
+  [labels]="['Jan','Fev','Mar','Abr']"
+  [data]="[10,20,30,15]"
+  titulo="Vendas do mês">
+</app-grafico>

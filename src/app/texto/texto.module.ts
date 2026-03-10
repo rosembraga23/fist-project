@@ -4,6 +4,7 @@ import { TextoComponent } from './texto.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { GraficoModule } from '../grafico/grafico.module';
 
 
 
