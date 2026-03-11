@@ -18,13 +18,15 @@ import { CepModule } from './cep/cep.module';
 import { CursoComponent } from './curso/curso.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { GraficoComponent } from './grafico/grafico.component';
+import { VideoComponent } from './video/video.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CursoComponent,
     DataBindingComponent,
-    GraficoComponent
+    GraficoComponent,
+    VideoComponent
     
   ],
   imports: [

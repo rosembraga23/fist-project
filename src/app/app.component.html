@@ -23,6 +23,10 @@
       <button mat-menu-item (click)="onMenuClick('/cep')">CEP</button>
       <!-- <button mat-menu-item>DropDown</button> -->
     </mat-menu>
+    <button mat-button [matMenuTriggerFor]="diversaoMenu">Diversão</button>
+  <mat-menu #diversaoMenu="matMenu" yPosition="below">
+    <button mat-menu-item (click)="onMenuClick('/video')">Vídeo</button>
+  </mat-menu>
 </div>
 
 <router-outlet></router-outlet>

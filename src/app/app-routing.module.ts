@@ -1,3 +1,4 @@
+import { VideoComponent } from './video/video.component';
 import { CepModule } from './cep/cep.module';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -63,7 +64,13 @@ const routes: Routes = [
    loadChildren: () => import('./data-binding/data-binding.module').then(m => m.DataBindingModule),
    component: DataBindingComponent
   },
+  {
+    path: 'video',
+    loadChildren: () => import('./video/video.module').then(m => m.VideoModule),
+    component: VideoComponent
+  },
   
+
 
   
   { path: '', redirectTo: 'home', pathMatch: 'full' },
