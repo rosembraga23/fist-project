@@ -16,7 +16,7 @@ export class DataBindingComponent{
   getValor(){
     return 1;
   }
-
+  
   getCurtirCurso(){
     return true;
   }

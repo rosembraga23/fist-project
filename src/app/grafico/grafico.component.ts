@@ -46,11 +46,17 @@ export class GraficoComponent implements AfterViewInit {
         plugins: {
           title: {
                 display: true,
-                text: 'Título do Gráfico'
+                text: 'Título do Gráfico',
+                font: {
+                        size: 24
+                      }
             },
           subtitle: {
                 display: true,
-                text: 'Custom Chart Subtitle'
+                text: 'Subtítulo do Gráfico',
+                font: {
+                        size: 18
+                      }
             },
             legend: {
               display: true, 
@@ -58,7 +64,7 @@ export class GraficoComponent implements AfterViewInit {
                 labels: {      
                     // This more specific font property overrides the global property
                     font: {
-                        size: 24
+                        size: 14
                     }
                 }
             }

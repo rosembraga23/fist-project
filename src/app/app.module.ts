@@ -19,6 +19,7 @@ import { CursoComponent } from './curso/curso.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { GraficoComponent } from './grafico/grafico.component';
 import { VideoComponent } from './video/video.component';
+import { OutputPropertyComponent } from './output-property/output-property.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +27,8 @@ import { VideoComponent } from './video/video.component';
     CursoComponent,
     DataBindingComponent,
     GraficoComponent,
-    VideoComponent
-    
+    VideoComponent,
+    OutputPropertyComponent, 
   ],
   imports: [
     BrowserModule,
