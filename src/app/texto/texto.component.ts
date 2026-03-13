@@ -12,7 +12,7 @@ export class TextoComponent{
   textoCtrl = new FormControl('', [
     Validators.required,
     Validators.maxLength(50),
-    Validators.pattern('^[A-Z]*$') // Apenas letras maiúsculas
+    //Validators.pattern('^[A-Z]*$') // Apenas letras maiúsculas
   ]);
 
   onInput(event: Event) {
@@ -20,6 +20,5 @@ export class TextoComponent{
     // Força o valor para maiúsculo
     input.value = input.value.toUpperCase();
     this.textoCtrl.setValue(input.value, { emitEvent: false });
+    }
   }
-
-}

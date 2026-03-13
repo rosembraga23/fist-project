@@ -1,11 +1,9 @@
 <br>
-<h1>CALCULADORA</h1>
-<!-- <app-texto></app-texto> -->
+<h1 style="margin: 10px;">CALCULADORA</h1>
 <br>
-<h2>Some dois Números:</h2>
+<h3 style="margin: 10px;">Some dois Números:</h3>
 
-<!-- <input type="number" class="lado-lado"  placeholder="Número 1"> -->
-<mat-form-field appearance="outline" class="campo">
+<mat-form-field appearance="outline" class="campo"  style="margin-left: 10px;">
   <mat-label>Número1</mat-label>
   <input
     matInput
@@ -13,11 +11,9 @@
     type="number"
     [(ngModel)]="number1"
     maxlength="50"
-    placeholder="Digite um valor..."
-  >
+    placeholder="Digite um valor...">
 </mat-form-field>
 
-<!-- <input type="number" class="lado-lado" [(ngModel)]="number2" placeholder="Número 2"> -->
 <mat-form-field appearance="outline" class="lado-lado">
   <mat-label>Número2</mat-label>
   <input
@@ -26,23 +22,23 @@
     type="number"
     [(ngModel)]="number2"
     maxlength="50"
-    placeholder="Digite um valor..."
-  >
+    placeholder="Digite um valor...">
 </mat-form-field>
+
 <button class = "example-button-row" matButton = "filled" (click)="sumNumbers()">
         Somar
 </button>
 <br>
 <br>
-<h3>Resultado: {{ result }}</h3>
+    <h3  style="margin: 10px;">Resultado: {{ result }}</h3>
 <br>
 
 
-  <div>
-    <button class = "botaoLimpar" matButton = "filled" (click)="clearNum()">
-        <mat-icon>delete</mat-icon>
-         Limpar
-    </button> 
-  </div> 
+<div>
+  <button class = "botaoLimpar" matButton = "filled" (click)="clearNum()">
+      <mat-icon>delete</mat-icon>
+        Limpar
+  </button> 
+</div> 
 
 
