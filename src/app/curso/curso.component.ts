@@ -1,8 +1,5 @@
-import { Chart } from 'chart.js/auto';
-import { AppRoutingModule } from './../app-routing.module';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CursoService } from './curso.service';
-import { GraficoComponent } from './../grafico/grafico.component';
 
 @Component({
   selector: 'app-curso',

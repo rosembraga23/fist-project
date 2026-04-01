@@ -1,7 +1,6 @@
-import { TextoComponent } from './../texto/texto.component';
-import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 import Chart from 'chart.js/auto';
-import { Colors, Legend } from 'chart.js';
+
 @Component({
   selector: 'app-grafico',
   templateUrl: './grafico.component.html',
@@ -14,7 +13,7 @@ export class GraficoComponent implements AfterViewInit {
 
   @Input() labels: string[] = [];
   @Input() data: number[] = [];
-  @Input() titulo: string = '';
+  @Input() titulo = '';
 
    chart!: Chart;
 

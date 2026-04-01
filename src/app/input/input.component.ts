@@ -7,11 +7,11 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent {
-  @Input() type: string = "";       // Tipo do input (text, password, email, etc.)
-  @Input() size: string = "";     // small | medium | large
-  @Input() color: string = ""    // Cor da fonte
-  @Input() required: boolean = true;   // Se é obrigatório
-  @Input() label: string = "";      // Label exibida acima do input
+  @Input() type = "";       // Tipo do input (text, password, email, etc.)
+  @Input() size = "";     // small | medium | large
+  @Input() color = ""    // Cor da fonte
+  @Input() required = true;   // Se é obrigatório
+  @Input() label = "";      // Label exibida acima do input
 
 textoCtrl = new FormControl('', [
   Validators.required,

@@ -7,9 +7,9 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./calculator.component.css'],
 })
 export class CalculatorComponent {
-  number1: number = 0;
-  number2: number = 0;
-  result: number = 0;
+  number1 = 0;
+  number2 = 0;
+  result = 0;
 
   sumNumbers(): void {
     this.result = this.number1 + this.number2;
@@ -32,6 +32,10 @@ export class CalculatorComponent {
     const input = event.target as HTMLInputElement;
     // Força o valor para maiúsculo
     input.value = input.value.toUpperCase();
+    if (input.value.length){
+      //this.textoCtrl.dirty;
+      //this.textoCtrl.touched;
+    }
     this.textoCtrl.setValue(input.value, { emitEvent: false });
   }
 

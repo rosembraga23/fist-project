@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class OutputPropertyComponent {
 
-valor: number = 0;
+valor = 0;
 
 decrementa(){
  this.valor--;

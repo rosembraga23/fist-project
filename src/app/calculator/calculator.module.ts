@@ -1,4 +1,3 @@
-import { MatDividerModule } from '@angular/material/divider';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CalculatorComponent } from './calculator.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';

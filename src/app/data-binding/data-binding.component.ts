@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-data-binding',
@@ -8,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 
 export class DataBindingComponent{
 
-  url: string = 'http://loiane.com';
-  cursoAngular: boolean = false;
-  urlImagem: string = 'https://fastly.picsum.photos/id/17/2500/1667.jpg?hmac=HD-JrnNUZjFiP2UZQvWcKrgLoC_pc_ouUSWv8kHsJJY';
+  url = 'http://loiane.com';
+  cursoAngular = false;
+  urlImagem = 'https://fastly.picsum.photos/id/17/2500/1667.jpg?hmac=HD-JrnNUZjFiP2UZQvWcKrgLoC_pc_ouUSWv8kHsJJY';
 
-  constructor(){ }
+ 
   getValor(){
     return 1;
   }

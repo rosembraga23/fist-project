@@ -7,7 +7,7 @@ import { CepService } from '../services/cep.service';
   styleUrls: ['./cep.component.css']
 })
 export class CepComponent {
-  cep: string = '';
+  cep = '';
   resultado: any;
 
   constructor(private cepService: CepService) {}
