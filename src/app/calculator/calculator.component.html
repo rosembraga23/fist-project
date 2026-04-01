@@ -1,44 +1,47 @@
 <br>
 <h1 style="margin: 10px;">CALCULADORA</h1>
-<br>
+
 <h3 style="margin: 10px;">Some dois Números:</h3>
 
-<mat-form-field appearance="outline" class="campo"  style="margin-left: 10px;">
+<mat-form-field appearance="outline" class="campo" style="margin-left: 10px;">
   <mat-label>Número1</mat-label>
   <input
     matInput
-    [formControl]="textoCtrl"
+    [formControl]="number1Ctrl"
     type="number"
-    [(ngModel)]="number1"
-    maxlength="50"
     placeholder="Digite um valor...">
+
+  @if (number1Ctrl.hasError('required') && number1Ctrl.touched) {
+    <mat-error>Campo obrigatório</mat-error>
+  }
 </mat-form-field>
 
 <mat-form-field appearance="outline" class="lado-lado">
   <mat-label>Número2</mat-label>
   <input
     matInput
-    [formControl]="textoCtrl"
+    [formControl]="number2Ctrl"
     type="number"
-    [(ngModel)]="number2"
-    maxlength="50"
     placeholder="Digite um valor...">
+
+  @if (number2Ctrl.hasError('required') && number2Ctrl.touched) {
+    <mat-error>Campo obrigatório</mat-error>
+  }
 </mat-form-field>
 
-<button class = "example-button-row" matButton = "filled" (click)="sumNumbers()">
-        Somar
+<button matButton="filled" (click)="sumNumbers()">
+  Somar
 </button>
-<br>
-<br>
-    <h3  style="margin: 10px;">Resultado: {{ result }}</h3>
-<br>
 
+<br><br>
+
+<h3 style="margin: 10px;">Resultado: {{ result }}</h3>
+
+<br>
 
 <div>
-  <button class = "botaoLimpar" matButton = "filled" (click)="clearNum()">
-      <mat-icon>delete</mat-icon>
-        Limpar
-  </button> 
-</div> 
-
-
+  <button class = "botaoLimpar" matButton="filled" (click)="clearNum()">
+    <mat-icon>delete</mat-icon>
+    Limpar
+  </button>
+</div>

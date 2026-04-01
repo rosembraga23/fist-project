@@ -7,37 +7,29 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./calculator.component.css'],
 })
 export class CalculatorComponent {
-  number1 = 0;
-  number2 = 0;
-  result = 0;
-
-  sumNumbers(): void {
-    this.result = this.number1 + this.number2;
-  }
-
-  clearNum(): void {
-    this.number1 = 0;
-    this.number2 = 0;
-    this.result = 0;
-  }
-
-    textoCtrl = new FormControl('', [
-      Validators.required,
-      Validators.maxLength(50),
-      Validators.pattern('^[A-Z]*$') // Apenas letras maiúsculas
-    ]);
   
+    number1Ctrl = new FormControl('', Validators.required);
+    number2Ctrl = new FormControl('', Validators.required);
 
-  onInput(event: Event) {
-    const input = event.target as HTMLInputElement;
-    // Força o valor para maiúsculo
-    input.value = input.value.toUpperCase();
-    if (input.value.length){
-      //this.textoCtrl.dirty;
-      //this.textoCtrl.touched;
+    result: number = 0;
+
+    sumNumbers() {
+      const n1 = Number(this.number1Ctrl.value);
+      const n2 = Number(this.number2Ctrl.value);
+    
+      if (!this.number1Ctrl.valid || !this.number2Ctrl.valid) {
+        this.number1Ctrl.markAsTouched();
+        this.number2Ctrl.markAsTouched();
+        return;
+      }
+    
+      this.result = n1 + n2;
     }
-    this.textoCtrl.setValue(input.value, { emitEvent: false });
-  }
 
+    clearNum() {
+      this.number1Ctrl.reset();
+      this.number2Ctrl.reset();
+      this.result = 0;
+  }
 
 }

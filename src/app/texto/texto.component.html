@@ -9,12 +9,13 @@
     (input)="onInput($event)"
     placeholder="Digite aqui..."
   >
-  <mat-hint align="end">{{ textoCtrl.value?.length || 0 }}/50</mat-hint>
-  <mat-error *ngIf="textoCtrl.hasError('required')">
-    O campo é obrigatório
-  </mat-error>
+  <mat-hint align="end">{{ textoCtrl.value?.length || 0 }}/2</mat-hint>
+  @if (textoCtrl.hasError('required')) {
+  <mat-error>Campo obrigatório</mat-error>
+  } 
+
   <mat-error *ngIf="textoCtrl.hasError('maxlength')">
-    Máximo de 50 caracteres
+    Máximo de 2 caracteres
   </mat-error>
   <!-- <mat-error *ngIf="textoCtrl.hasError('pattern')"> -->
     <!-- Apenas letras maiúsculas são permitidas -->
