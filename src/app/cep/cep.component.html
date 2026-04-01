@@ -1,42 +1,39 @@
-<!-- <input [(ngModel)]="cep" placeholder="Digite o CEP" />
-<button (click)="buscarCep()">Buscar</button>
+<div class="cep-container">
+  <h2>Consulta de CEP</h2>
+  <mat-form-field appearance="outline">
+    <mat-label>Digite o CEP</mat-label>
+    <input matInput [(ngModel)]="cep" 
+    required
+    pattern="^[0-9]{8}$"
+    maxlength="8"
+    minlength="8"
+    (keypress)="permitirSomenteNumeros($event)"
+    (paste)="bloquearColar($event)"
+    (drop)="bloquearColarMouse($event)"
+    (dragover)="bloquearColarMouse($event)"
+    (contextmenu)="bloquearCliqueDireito($event)"
+    placeholder="Ex: 01001000" style="
+    height: 50px">
+  </mat-form-field>
 
-<pre>{{ resultado | json}}</pre> -->
+  <button mat-raised-button color="primary"
+   (click)="consultar()" [disabled]="loading">
+    {{ loading ? 'Consultando...' : 'Consultar CEP' }}
+  </button>
 
-<div style="max-width: 500px; margin: 30px auto;">
-  <mat-card>
-    <h2>Consulta de CEP</h2>
 
-    <!-- Campo de entrada -->
-    <mat-form-field appearance="outline" style="width: 100%;">
-      <mat-label>Digite o CEP</mat-label>
-      <input
-        matInput
-        [(ngModel)]="cep"
-        placeholder="Ex: 01001000"
-        maxlength="8"
-      />
-    </mat-form-field>
 
-    <!-- Botão -->
-    <button
-      mat-raised-button
-      color="primary"
-      style="width: 100%; margin-top: 10px;"
-      (click)="buscarCep()"
-    >
-      Buscar CEP
-    </button>
+  <mat-card *ngIf="resultado" class="cep-card">
+    <mat-card-title>Resultado da Consulta</mat-card-title>
+    <mat-card-content>
+      <p><strong>CEP:</strong> {{ resultado.cep }}</p>
+      <p><strong>Logradouro:</strong> {{ resultado.street }}</p>
+      <p><strong>Bairro:</strong> {{ resultado.neighborhood }}</p>
+      <p><strong>Cidade:</strong> {{ resultado.city }}</p>
+      <p><strong>Estado:</strong> {{ resultado.state }}</p>
+    </mat-card-content>
   </mat-card>
 
-  <!-- Resultado -->
-  <mat-card *ngIf="resultado" style="margin-top: 20px;">
-    <h3>Resultado</h3>
-    <p><strong>CEP:</strong> {{ resultado.cep }}</p>
-    <p><strong>Logradouro:</strong> {{ resultado.street }}</p>
-    <p><strong>Bairro:</strong> {{ resultado.neighborhood }}</p>
-    <p><strong>Cidade:</strong> {{ resultado.city }}</p>
-    <p><strong>Estado:</strong> {{ resultado.state }}</p>
-  </mat-card>
+  <mat-error *ngIf="error">{{ error }}</mat-error>
+  
 </div>
-

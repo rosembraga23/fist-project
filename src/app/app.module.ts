@@ -20,6 +20,8 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { GraficoComponent } from './grafico/grafico.component';
 import { VideoComponent } from './video/video.component';
 import { OutputPropertyComponent } from './output-property/output-property.component';
+import { MatIconModule } from '@angular/material/icon';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -47,8 +49,11 @@ import { OutputPropertyComponent } from './output-property/output-property.compo
     CepModule,
     MatButtonModule,
     FormsModule,
+    MatIconModule,
 ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
