@@ -9,23 +9,27 @@
       <button mat-menu-item (click)="onMenuClick('/calculator')">Calculadora</button>
       <button mat-menu-item (click)="onMenuClick('/primeiro')">Foto</button>
     </mat-menu>
-    <button mat-button [matMenuTriggerFor]="cursoMenu">Utilitários</button>
-    <mat-menu #cursoMenu="matMenu" yPosition="above">
+    <button mat-button [matMenuTriggerFor]="utilitMenu">Utilitários</button>
+    <mat-menu #utilitMenu="matMenu" yPosition="above">
       <button mat-menu-item (click)="onMenuClick('/curso')">Curso</button>
-      <button mat-menu-item (click)="onMenuClick('/dataBinding')">Data Binding</button>
       <button mat-menu-item (click)="onMenuClick('/grafico')">Gráfico</button>
-      <button mat-menu-item (click)="onMenuClick('/')">Curso2</button>
+      <button mat-menu-item (click)="onMenuClick('/pipe')">Pipe</button>
     </mat-menu>
-    <button mat-button [matMenuTriggerFor]="belowMenu">Help</button>
+    <button mat-button [matMenuTriggerFor]="diretivasMenu">Diretivas</button>
+    <mat-menu #diretivasMenu="matMenu" yPosition="above"> 
+      <button mat-menu-item (click)="onMenuClick('/dataBinding')">Data Binding </button>
+      <button mat-menu-item (click)="onMenuClick('/ngif')">Diretiva NgIf</button>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="diversaoMenu">Diversão</button>
+    <mat-menu #diversaoMenu="matMenu" yPosition="below">
+       <button mat-menu-item (click)="onMenuClick('/video')">Vídeo</button>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="belowMenu">Componentes</button>
     <mat-menu #belowMenu="matMenu" yPosition="below">
       <button mat-menu-item (click)="onMenuClick('/texto')">Texto</button>
       <button mat-menu-item (click)="onMenuClick('/input')">Input</button>
       <button mat-menu-item (click)="onMenuClick('/cep')">CEP</button>
-      <!-- <button mat-menu-item>DropDown</button> -->
-    </mat-menu>
-    <button mat-button [matMenuTriggerFor]="diversaoMenu">Diversão</button>
-  <mat-menu #diversaoMenu="matMenu" yPosition="below">
-    <button mat-menu-item (click)="onMenuClick('/video')">Vídeo</button>
+    <!-- <button mat-menu-item>DropDown</button> -->
   </mat-menu>
 </div>
 

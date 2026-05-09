@@ -11,6 +11,8 @@ import { CepComponent } from './cep/cep.component';
 import { CursoComponent } from './curso/curso.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { GraficoComponent } from './grafico/grafico.component';
+import { DiretivaNgifComponent } from './diretiva-ngif/diretiva-ngif.component';
+import { PipeComponent } from './pipe/pipe.component';
 
 const routes: Routes = [
   {
@@ -58,11 +60,21 @@ const routes: Routes = [
     loadChildren: () => import('./curso/curso.module').then(m => m.CursoModule),
     component: CursoComponent
   },
+   {
+    path: 'pipe',
+    loadChildren: () => import('./pipe/pipe.module').then(m => m.PipeModule),
+    component: PipeComponent
+  },
   {
    path: 'dataBinding',
    loadChildren: () => import('./data-binding/data-binding.module').then(m => m.DataBindingModule),
    component: DataBindingComponent
   },
+  {
+ path: 'ngif',
+ loadChildren: () => import('./diretiva-ngif/diretiva-ngif.module').then(m => m.DiretivaNgifModule),
+ component: DiretivaNgifComponent
+},
   {
     path: 'video',
     loadChildren: () => import('./video/video.module').then(m => m.VideoModule),

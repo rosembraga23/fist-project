@@ -1,0 +1,11 @@
+<h2><b>Exemplos de Pipes</b></h2>
+<br>
+<p><b>Título:</b> {{ livro.titulo | uppercase }}</p>
+<p><b>Estrelas:</b> {{ livro.rating | number:'1.2-2' }}</p>
+<p><b>Páginas:</b> {{ livro.numeroPaginas | number}}</p>
+<p><b>Preço:</b> {{ livro.preco | currency:'BRL' }}</p>
+<p><b>Data de Lançamento:</b> {{ livro.dataLancamento | date:'dd/MM/yyyy' }}</p>   
+<p><b>URL:</b> <a href="{{ livro.url }}" target="_blank">{{ livro.url }}</a></p>
+<p><b>Autor:</b> {{ livro.autor | lowercase }}</p>
+<br>
+<p><b>Livro:</b> {{ livro | json }}</p>

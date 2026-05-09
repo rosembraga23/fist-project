@@ -10,7 +10,6 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { CalculatorModule } from './calculator/calculator.module';
 import { TextoModule } from './texto/texto.module';
 import { InputModule } from './input/input.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -22,6 +21,8 @@ import { VideoComponent } from './video/video.component';
 import { OutputPropertyComponent } from './output-property/output-property.component';
 import { MatIconModule } from '@angular/material/icon';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { DiretivaNgifModule } from './diretiva-ngif/diretiva-ngif.module';
+import { CalculatorModule } from './calculator/calculator.module';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,6 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    CalculatorModule,
     TextoModule,
     InputModule,
     HttpClientModule,
@@ -50,6 +50,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     MatButtonModule,
     FormsModule,
     MatIconModule,
+    DiretivaNgifModule,
+    CalculatorModule,
 ],
   providers: [
     provideAnimationsAsync()

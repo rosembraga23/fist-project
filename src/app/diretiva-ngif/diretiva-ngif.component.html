@@ -1,0 +1,10 @@
+<h2>DIRETIVAS NGIf</h2>
+@if (cursos.length > 0) {
+    {{cursos}}
+}
+  
+@if (cursos.length == 0) {
+    <p>Não existe lista de cursos.</p>
+}
+<br>
+<input matInput placeholder="Digite algo" type="text" (formControl)="curso">
