@@ -1,0 +1,17 @@
+<!-- chamada de componente - app-grafico -->
+ <br>
+ <a routerLink="/home">
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+ </a>
+
+<!-- (click)="irParaHome()" -->
+ <div>
+    <app-grafico
+        [labels]="['Jan','Fev','Mar','Abr']"
+        [data]="[10,20,30,15]"
+        tituloPage="Grafico Barra"
+        titulo="Vendas Mensal"
+        [backgroundColor] = "['blue', 'yellow', 'pink', 'red']">
+        subtitulo="Vendas">
+    </app-grafico>
+ </div>

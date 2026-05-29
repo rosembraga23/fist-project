@@ -5,7 +5,7 @@
 <p><b>Páginas:</b> {{ livro.numeroPaginas | number}}</p>
 <p><b>Preço:</b> {{ livro.preco | currency:'BRL' }}</p>
 <p><b>Data de Lançamento:</b> {{ livro.dataLancamento | date:'dd/MM/yyyy' }}</p>   
-<p><b>URL:</b> <a href="{{ livro.url }}" target="_blank">{{ livro.url }}</a></p>
-<p><b>Autor:</b> {{ livro.autor | lowercase }}</p>
+<p><b>URL: </b> <a href="{{ livro.url }}" target="_blank">{{ livro.url }}</a></p>
+<p><b>Autor:</b> {{ livro.autor | lowercase | uppercase }}</p>
 <br>
 <p><b>Livro:</b> {{ livro | json }}</p>

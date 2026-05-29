@@ -23,6 +23,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { DiretivaNgifModule } from './diretiva-ngif/diretiva-ngif.module';
 import { CalculatorModule } from './calculator/calculator.module';
+import { GraficoBarraComponent } from './grafico-barra/grafico-barra.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { CalculatorModule } from './calculator/calculator.module';
     GraficoComponent,
     VideoComponent,
     OutputPropertyComponent, 
+    GraficoBarraComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,7 @@ import { CalculatorModule } from './calculator/calculator.module';
     FormsModule,
     MatIconModule,
     DiretivaNgifModule,
-    CalculatorModule,
+    CalculatorModule
 ],
   providers: [
     provideAnimationsAsync()

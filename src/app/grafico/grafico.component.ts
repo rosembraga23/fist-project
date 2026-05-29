@@ -12,8 +12,11 @@ export class GraficoComponent implements AfterViewInit {
   @ViewChild("meuCanvas", {static: true}) elemento!: ElementRef
 
   @Input() labels: string[] = [];
+  @Input() backgroundColor: string[] = [];
   @Input() data: number[] = [];
   @Input() titulo = '';
+  @Input() subtitulo = '';
+  @Input() tituloPage = '';
 
    chart!: Chart;
 
@@ -35,7 +38,8 @@ export class GraficoComponent implements AfterViewInit {
               //data:[2, 20, 10, 13, 5],
               label: this.titulo,
               data: this.data,
-              backgroundColor: ["blue", "yellow", "pink", "red", "orange"],
+              //backgroundColor: ["blue", "yellow", "pink", "red", "orange"],
+              backgroundColor: this.backgroundColor,
               //label: "Meses"
           },
           
@@ -45,14 +49,14 @@ export class GraficoComponent implements AfterViewInit {
         plugins: {
           title: {
                 display: true,
-                text: 'Título do Gráfico',
+                text: this.titulo,
                 font: {
                         size: 24
                       }
             },
           subtitle: {
                 display: true,
-                text: 'Subtítulo do Gráfico',
+                text: this.subtitulo,
                 font: {
                         size: 18
                       }
@@ -63,7 +67,7 @@ export class GraficoComponent implements AfterViewInit {
                 labels: {      
                     // This more specific font property overrides the global property
                     font: {
-                        size: 14
+                        size: 18
                     }
                 }
             }

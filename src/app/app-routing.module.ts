@@ -10,9 +10,9 @@ import { InputComponent } from './input/input.component';
 import { CepComponent } from './cep/cep.component';
 import { CursoComponent } from './curso/curso.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { GraficoComponent } from './grafico/grafico.component';
 import { DiretivaNgifComponent } from './diretiva-ngif/diretiva-ngif.component';
 import { PipeComponent } from './pipe/pipe.component';
+import { GraficoBarraComponent } from './grafico-barra/grafico-barra.component';
 
 const routes: Routes = [
   {
@@ -41,9 +41,9 @@ const routes: Routes = [
     component: TextoComponent
   },
   {
-  path: 'grafico',
-  loadChildren: () => import('./grafico/grafico.module').then(m => m.GraficoModule),
-  component: GraficoComponent
+  path: 'grafico-barra',
+  loadChildren: () => import('./grafico-barra/grafico-barra.module').then(m => m.GraficoBarraModule),
+  component: GraficoBarraComponent
   },
   {
     path: 'input',
@@ -66,23 +66,20 @@ const routes: Routes = [
     component: PipeComponent
   },
   {
-   path: 'dataBinding',
-   loadChildren: () => import('./data-binding/data-binding.module').then(m => m.DataBindingModule),
-   component: DataBindingComponent
+    path: 'dataBinding',
+    loadChildren: () => import('./data-binding/data-binding.module').then(m => m.DataBindingModule),
+    component: DataBindingComponent
   },
   {
- path: 'ngif',
- loadChildren: () => import('./diretiva-ngif/diretiva-ngif.module').then(m => m.DiretivaNgifModule),
- component: DiretivaNgifComponent
-},
+    path: 'ngif',
+    loadChildren: () => import('./diretiva-ngif/diretiva-ngif.module').then(m => m.DiretivaNgifModule),
+    component: DiretivaNgifComponent
+  },
   {
     path: 'video',
     loadChildren: () => import('./video/video.module').then(m => m.VideoModule),
     component: VideoComponent
   },
-  
-
-
   
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home' }
