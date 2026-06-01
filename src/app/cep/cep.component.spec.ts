@@ -1,25 +1,33 @@
 import { CepService } from './../services/cep.service';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { of, throwError } from 'rxjs';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+//import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { CepComponent } from './cep.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import { AppComponent } from './app.component';
 
 describe('CepComponent', () => {
-  let component: AppComponent;
-  let fixture: ComponentFixture<AppComponent>;
+  let component: CepComponent;
+  let fixture: ComponentFixture<CepComponent>;
   let cepService: jasmine.SpyObj<CepService>;
 
   beforeEach(async () => {
     const spy = jasmine.createSpyObj('CepService', ['consultarCep']);
 
     await TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule, FormsModule],
-      declarations: [AppComponent],
+      imports: [
+        FormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        NoopAnimationsModule
+    ],
+      declarations: [CepComponent],
       providers: [{ provide: CepService, useValue: spy }]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(AppComponent);
+    fixture = TestBed.createComponent(CepComponent);
     component = fixture.componentInstance;
     cepService = TestBed.inject(CepService) as jasmine.SpyObj<CepService>;
     fixture.detectChanges();
