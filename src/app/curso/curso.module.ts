@@ -1,16 +1,36 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CursoService } from './curso.service';
+import { CursoComponent } from './curso.component';
+import { DataBindingModule } from '../data-binding/data-binding.module';
+import { FormsModule } from '@angular/forms';
+import { GraficoModule } from '../grafico/grafico.module';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    CursoComponent,
+    ],
   imports: [
-    CommonModule
+    // módulo de funcionalidades comuns, como ngIf, ngFor, etc.
+    // Deve ser importado em todos os módulos que utilizam essas funcionalidades
+    FormsModule,
+    CommonModule,  
+    //importado aqui e exportado em DataBindingModule
+    DataBindingModule,
+
+    //deve ser importado onde está sendo utilizado o componente GraficoComponent, 
+    // e exportado em GraficoModule para garantir que ele seja reconhecido e possa ser utilizado sem erros de validação
+    GraficoModule 
   ],
   providers: [
-    CursoService
-  ]
+    CursoService // serviço que será utilizado pelos componentes do módulo curso 
+                // sempre em providenciar o serviço no módulo, para garantir que ele seja singleton e compartilhado entre os componentes do módulo
+  ],
+  bootstrap: [CursoComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+    ],
 })
 export class CursoModule { }

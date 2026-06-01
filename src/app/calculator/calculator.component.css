@@ -36,7 +36,6 @@ section {
   min-width: 120px;
 }
 
-
 .example-button-soma {
   width: 90px;
   height: 35px;
@@ -80,4 +79,16 @@ section {
   width: 100px;
   height: 50px;
   margin-left: 1%;
+}
+
+.icone-grande {
+  font-size: 48px;
+  margin-left: 95%;
+  width: 48px;
+  height: 48px;
+}
+.icone-label {
+  margin-left: 94%;
+  width: 48px;
+  height: 48px;
 }

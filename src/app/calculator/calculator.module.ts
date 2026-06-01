@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -19,11 +20,9 @@ import { CommonModule } from '@angular/common';
     ReactiveFormsModule,
     MatIconModule,
     MatButtonModule,
-    // MatDividerModule,
     MatFormFieldModule,
     MatInputModule,
-    // TextoModule
-
+    RouterModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

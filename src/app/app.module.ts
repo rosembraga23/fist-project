@@ -10,33 +10,35 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { TextoModule } from './texto/texto.module';
-import { InputModule } from './input/input.module';
 import { HttpClientModule } from '@angular/common/http';
-import { CepModule } from './cep/cep.module';
-import { CursoComponent } from './curso/curso.component';
-import { DataBindingComponent } from './data-binding/data-binding.component';
-import { GraficoComponent } from './grafico/grafico.component';
-import { VideoComponent } from './video/video.component';
 import { OutputPropertyComponent } from './output-property/output-property.component';
 import { MatIconModule } from '@angular/material/icon';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { DiretivaNgifModule } from './diretiva-ngif/diretiva-ngif.module';
-import { CalculatorModule } from './calculator/calculator.module';
-import { GraficoBarraComponent } from './grafico-barra/grafico-barra.component';
+// import { TextoModule } from './texto/texto.module';
+// import { InputModule } from './input/input.module';
+// import { CepModule } from './cep/cep.module';
+// import { CursoComponent } from './curso/curso.component';
+// import { DataBindingComponent } from './data-binding/data-binding.component';
+// import { GraficoComponent } from './grafico/grafico.component';
+// import { VideoComponent } from './video/video.component';
+// import { DiretivaNgifModule } from './diretiva-ngif/diretiva-ngif.module';
+// import { CalculatorModule } from './calculator/calculator.module';
+// import { GraficoBarraComponent } from './grafico-barra/grafico-barra.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CursoComponent,
-    DataBindingComponent,
-    GraficoComponent,
-    VideoComponent,
+    // CursoComponent,
+    // DataBindingComponent, acrescentei o componente DataBindingComponent no módulo curso, para organizar melhor os componentes relacionados a curso, e evitar que o AppModule fique muito carregado de componentes  
+    // GraficoComponent,
+    // VideoComponent,
     OutputPropertyComponent, 
-    GraficoBarraComponent,
+    // GraficoBarraComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, //só importado no modulo principal, não precisa importar em outros módulos
+                  // neste caso o ideal é uar o BrowserModule apenas no AppModule, e usar o 
+                  // CommonModule nos outros módulos
     AppRoutingModule,
     HomeRoutingModule,
     BrowserAnimationsModule,
@@ -45,15 +47,15 @@ import { GraficoBarraComponent } from './grafico-barra/grafico-barra.component';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    TextoModule,
-    InputModule,
+    // TextoModule,
+    // InputModule,
     HttpClientModule,
-    CepModule,
+    // CepModule,
     MatButtonModule,
     FormsModule,
-    MatIconModule,
-    DiretivaNgifModule,
-    CalculatorModule
+    MatIconModule
+    // DiretivaNgifModule
+    // CalculatorModule
 ],
   providers: [
     provideAnimationsAsync()

@@ -1,10 +1,10 @@
 <mat-toolbar class="corToolbar">
-      <h1>Conteúdo do toolbar!</h1>
+      <span>Treinando Angular.ts</span>
 </mat-toolbar>
 
 <div class="menu">
-    <button mat-button routerLinkActive="menu" [matMenuTriggerFor]="aboveMenu">Menu</button>
-    <mat-menu #aboveMenu="matMenu" yPosition="above">
+    <button  mat-button [matMenuTriggerFor]="inicioMenu">Início</button>
+    <mat-menu #inicioMenu="matMenu" yPosition="above">
       <button mat-menu-item (click)="onMenuClick('/about')">Sobre</button>
       <button mat-menu-item (click)="onMenuClick('/calculator')">Calculadora</button>
       <button mat-menu-item (click)="onMenuClick('/primeiro')">Foto</button>
@@ -21,18 +21,16 @@
       <button mat-menu-item (click)="onMenuClick('/ngif')">Diretiva NgIf</button>
     </mat-menu>
     <button mat-button [matMenuTriggerFor]="diversaoMenu">Diversão</button>
-    <mat-menu #diversaoMenu="matMenu" yPosition="below">
+    <mat-menu #diversaoMenu="matMenu" yPosition="above">
        <button mat-menu-item (click)="onMenuClick('/video')">Vídeo</button>
     </mat-menu>
-    <button mat-button [matMenuTriggerFor]="belowMenu">Componentes</button>
-    <mat-menu #belowMenu="matMenu" yPosition="below">
+    <button mat-button [matMenuTriggerFor]="componMenu">Componentes</button>
+    <mat-menu #componMenu="matMenu" yPosition="above">
       <button mat-menu-item (click)="onMenuClick('/texto')">Texto</button>
       <button mat-menu-item (click)="onMenuClick('/input')">Input</button>
       <button mat-menu-item (click)="onMenuClick('/cep')">CEP</button>
-    <!-- <button mat-menu-item>DropDown</button> -->
   </mat-menu>
 </div>
-
 <router-outlet></router-outlet>
 
  
