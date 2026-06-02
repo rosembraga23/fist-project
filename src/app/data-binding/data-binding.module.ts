@@ -1,6 +1,8 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DataBindingComponent } from './data-binding.component';
+import { RouterModule } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -11,8 +13,10 @@ import { DataBindingComponent } from './data-binding.component';
   ],
   exports: [DataBindingComponent],
   imports: [
-    CommonModule,
-  ],
+      CommonModule,
+      MatIconModule,
+      RouterModule
+    ],
   bootstrap: [DataBindingComponent],
   schemas: [
       CUSTOM_ELEMENTS_SCHEMA

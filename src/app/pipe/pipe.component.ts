@@ -13,8 +13,6 @@ export class SafePipe implements PipeTransform {
 
 @Component({
   selector: 'app-pipe',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './pipe.component.html',
   styleUrl: './pipe.component.css'
 })

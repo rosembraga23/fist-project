@@ -3,8 +3,6 @@ import { FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-diretiva-ngif',
-  standalone: true,
-  imports: [],
   templateUrl: './diretiva-ngif.component.html',
   styleUrl: './diretiva-ngif.component.css'
 })

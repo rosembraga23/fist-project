@@ -5,3 +5,15 @@
 .titulo{
     color: blue;
 }
+
+.icone-grande {
+  font-size: 48px;
+  margin-left: 95%;
+  width: 48px;
+  height: 48px;
+}
+.icone-label {
+  margin-left: 94%;
+  width: 48px;
+  height: 48px;
+}

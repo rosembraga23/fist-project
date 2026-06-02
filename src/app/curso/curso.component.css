@@ -4,3 +4,14 @@
   align-items: center;     /* centraliza verticalmente */
   height: 100vh;           /* ocupa a altura inteira da tela */
 }
+.icone-grande {
+  font-size: 48px;
+  margin-left: 95%;
+  width: 48px;
+  height: 48px;
+}
+.icone-label {
+  margin-left: 94%;
+  width: 48px;
+  height: 48px;
+}

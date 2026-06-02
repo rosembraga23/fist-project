@@ -1,12 +1,20 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
+import { PipeComponent } from './pipe.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [PipeComponent],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    MatIconModule,
+    RouterModule,
+  ],
+  bootstrap: [PipeComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  
 })
 export class PipeModule { }

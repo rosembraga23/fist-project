@@ -4,6 +4,8 @@ import { InputComponent } from './input.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -13,6 +15,8 @@ import { MatInputModule } from '@angular/material/input';
         ReactiveFormsModule,
         MatFormFieldModule,
         MatInputModule,
+        MatIconModule,
+        RouterModule,
   ],
   exports: [InputComponent],
   schemas: [

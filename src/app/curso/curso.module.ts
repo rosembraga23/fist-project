@@ -5,8 +5,8 @@ import { CursoComponent } from './curso.component';
 import { DataBindingModule } from '../data-binding/data-binding.module';
 import { FormsModule } from '@angular/forms';
 import { GraficoModule } from '../grafico/grafico.module';
-
-
+import { MatIconModule } from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,9 @@ import { GraficoModule } from '../grafico/grafico.module';
 
     //deve ser importado onde está sendo utilizado o componente GraficoComponent, 
     // e exportado em GraficoModule para garantir que ele seja reconhecido e possa ser utilizado sem erros de validação
-    GraficoModule 
+    GraficoModule,
+    MatIconModule,
+    RouterModule
   ],
   providers: [
     CursoService // serviço que será utilizado pelos componentes do módulo curso 
