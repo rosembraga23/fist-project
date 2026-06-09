@@ -15,3 +15,21 @@
   margin-top: 1%;
   color: blue;
 }
+.demo-table {
+  width: 100%;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  border-color: currentColor;
+  background-color: rgba(214, 223, 236, 0.758);
+}
+
+.demo-row-is-clicked {
+  font-weight: bold;
+}
