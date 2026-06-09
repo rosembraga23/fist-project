@@ -13,6 +13,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DiretivaNgifComponent } from './diretiva-ngif/diretiva-ngif.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { GraficoBarraComponent } from './grafico-barra/grafico-barra.component';
+import { AlunosComponent } from './alunos/alunos.component';
 
 const routes: Routes = [
   {
@@ -79,6 +80,10 @@ const routes: Routes = [
     path: 'video',
     loadChildren: () => import('./video/video.module').then(m => m.VideoModule),
     component: VideoComponent
+  },
+  {
+    path: 'alunos',
+    loadChildren: () => import('./alunos/alunos.module').then(m => m.AlunosModule)
   },
   
   { path: '', redirectTo: 'home', pathMatch: 'full' },

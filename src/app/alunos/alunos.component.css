@@ -1,0 +1,17 @@
+.tabela-container {
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+.margem{
+  margin-top: 1%;
+  color: blue;
+}
