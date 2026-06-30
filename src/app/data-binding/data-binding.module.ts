@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 import { DataBindingComponent } from './data-binding.component';
 import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +19,11 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [
       CommonModule,
       MatIconModule,
-      RouterModule
+      RouterModule,
+      MatFormFieldModule,
+      MatSelectModule,
+      MatInputModule,
+      FormsModule
     ],
   bootstrap: [DataBindingComponent],
   schemas: [

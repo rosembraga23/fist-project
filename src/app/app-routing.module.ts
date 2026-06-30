@@ -14,6 +14,7 @@ import { DiretivaNgifComponent } from './diretiva-ngif/diretiva-ngif.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { GraficoBarraComponent } from './grafico-barra/grafico-barra.component';
 import { AlunosComponent } from './alunos/alunos.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -56,10 +57,15 @@ const routes: Routes = [
     loadChildren: () => import('./cep/cep.module').then(m => m.CepModule),
     component: CepComponent
   },
-   {
+  {
     path: 'curso',
     loadChildren: () => import('./curso/curso.module').then(m => m.CursoModule),
     component: CursoComponent
+  },
+    {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then(m => m.LoginModule),
+    component: LoginComponent
   },
    {
     path: 'pipe',

@@ -12,6 +12,7 @@
     <button mat-button [matMenuTriggerFor]="utilitMenu">Utilitários</button>
     <mat-menu #utilitMenu="matMenu" yPosition="above">
       <button mat-menu-item (click)="onMenuClick('/curso')">Curso</button>
+      <button mat-menu-item (click)="onMenuClick('/login')">Login</button>
       <button mat-menu-item (click)="onMenuClick('/grafico-barra')">Gráfico Barra</button>
       <button mat-menu-item (click)="onMenuClick('/pipe')">Pipe</button>
     </mat-menu>

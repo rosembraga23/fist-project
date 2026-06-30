@@ -41,6 +41,20 @@
         </div>
     </article>
 
+    <h4>Bas ic native select</h4>
+    
+<mat-form-field>
+  <mat-label>Cars</mat-label>
+  <select #classe (change)="0" matNativeControl required>
+    <option value="selecione">Selecione</option>
+    <option value="alert-success">Sucesso</option>
+    <option value="alert-info">Info</option>
+    <option value="alert-warning">Alerta</option>
+    <option value="alert-danger">Erro</option>
+  </select>
+</mat-form-field>
+
+
     <br><br>
 
     <div class="alert {{classe.value}}" role="alert"
