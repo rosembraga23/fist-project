@@ -4,29 +4,29 @@
 
 <div class="menu">
     <button  mat-button [matMenuTriggerFor]="inicioMenu">Início</button>
-    <mat-menu #inicioMenu="matMenu" yPosition="above">
+    <mat-menu #inicioMenu="matMenu" yPosition="below">
       <button mat-menu-item (click)="onMenuClick('/about')">Sobre</button>
       <button mat-menu-item (click)="onMenuClick('/calculator')">Calculadora</button>
       <button mat-menu-item (click)="onMenuClick('/primeiro')">Foto</button>
     </mat-menu>
     <button mat-button [matMenuTriggerFor]="utilitMenu">Utilitários</button>
-    <mat-menu #utilitMenu="matMenu" yPosition="above">
+    <mat-menu #utilitMenu="matMenu" yPosition="below">
       <button mat-menu-item (click)="onMenuClick('/curso')">Curso</button>
       <button mat-menu-item (click)="onMenuClick('/login')">Login</button>
       <button mat-menu-item (click)="onMenuClick('/grafico-barra')">Gráfico Barra</button>
       <button mat-menu-item (click)="onMenuClick('/pipe')">Pipe</button>
     </mat-menu>
     <button mat-button [matMenuTriggerFor]="diretivasMenu">Diretivas</button>
-    <mat-menu #diretivasMenu="matMenu" yPosition="above"> 
+    <mat-menu #diretivasMenu="matMenu" yPosition="below"> 
       <button mat-menu-item (click)="onMenuClick('/dataBinding')">Data Binding </button>
       <button mat-menu-item (click)="onMenuClick('/ngif')">Diretiva NgIf</button>
     </mat-menu>
     <button mat-button [matMenuTriggerFor]="diversaoMenu">Diversão</button>
-    <mat-menu #diversaoMenu="matMenu" yPosition="above">
+    <mat-menu #diversaoMenu="matMenu" yPosition="below">
        <button mat-menu-item (click)="onMenuClick('/video')">Vídeo</button>
     </mat-menu>
     <button mat-button [matMenuTriggerFor]="componMenu">Componentes</button>
-    <mat-menu #componMenu="matMenu" yPosition="above">
+    <mat-menu #componMenu="matMenu" yPosition="below">
       <button mat-menu-item (click)="onMenuClick('/texto')">Texto</button>
       <button mat-menu-item (click)="onMenuClick('/input')">Input</button>
       <button mat-menu-item (click)="onMenuClick('/cep')">CEP</button>
