@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { OutputPropertyComponent } from './output-property/output-property.component';
 import { MatIconModule } from '@angular/material/icon';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { CursoModule } from './curso.module';
 // import { AlunosModule } from './alunos/alunos.module';
 // import { TextoModule } from './texto/texto.module';
 // import { InputModule } from './input/input.module';
@@ -55,6 +56,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     MatButtonModule,
     FormsModule,
     MatIconModule,
+    CursoModule,
     // DiretivaNgifModule
     // CalculatorModule
 ],

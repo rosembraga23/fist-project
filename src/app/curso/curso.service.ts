@@ -6,8 +6,12 @@ import { Injectable } from '@angular/core';
 export class CursoService {
 
   constructor() { }
-
-  getCursos(){
-    return ['Java', 'Angular', 'Python']
-  }
+   public cursos: any[] = [
+   { id: 1, nome: 'Java'},
+   { id: 2, nome: 'Angular'},
+   { id: 3, nome: 'Python'}
+ ];
+ getCursos() {
+   return this.cursos;
+ }
 }

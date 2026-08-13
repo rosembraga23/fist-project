@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { GraficoModule } from '../grafico/grafico.module';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RouterModule } from '@angular/router';
     // e exportado em GraficoModule para garantir que ele seja reconhecido e possa ser utilizado sem erros de validação
     GraficoModule,
     MatIconModule,
-    RouterModule
+    RouterModule,
+    MatTableModule
   ],
   providers: [
     CursoService // serviço que será utilizado pelos componentes do módulo curso 

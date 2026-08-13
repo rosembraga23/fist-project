@@ -6,16 +6,42 @@
     </div>
  </a>
 
-<a  href="{{nomePortal}}" target="_blank" rel="noopener noreferrer"> 
-    <!-- o link será aberto em uma nova aba -->
-{{nomePortal}}
-</a>
-
+<br>
+<br>
 <!-- <app-curso-detalhe></app-curso-detalhe> -->
+
+<h2 class="margem">Lista de Cursos</h2>
+<a  href="{{nomePrtal}}" target="_blank" rel="noopener noreferrer"> 
+    <!-- o link será aberto em uma nova aba -->
+{{nomePrtal}}
+</a>
+<div class="tabela-container table">
+
+<table mat-table [dataSource]="cursos" class="mat-elevation-z8 demo-table">
+
+     <!-- Coluna ID -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let curso">
+                {{ curso.id }}
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="nome">
+            <th mat-header-cell *matHeaderCellDef> Curso </th>
+            <td mat-cell *matCellDef="let curso">
+                {{ curso.nome }}
+            </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+</div>
+<br>
+<br>
 
 <ul>
     <li *ngFor="let curso of cursos">
-        {{curso}}
+        {{curso.nome}}
     </li>
 </ul>
 
